@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
-        android:text="Address: \n 40 Street \n Los Angeles, CA"
+        android:text="@string/address_n_40_street_n_los_angeles_ca"
         android:textColor="@android:color/background_light"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/altitudeTextView" />

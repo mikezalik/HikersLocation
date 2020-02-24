@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hikers Location</string>
+    <string name="address_n_40_street_n_los_angeles_ca">Address:   40 Street   Los Angeles, CA</string>
 </resources>
