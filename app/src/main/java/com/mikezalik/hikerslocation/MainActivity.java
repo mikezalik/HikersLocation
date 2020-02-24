@@ -99,6 +99,14 @@ public class MainActivity extends AppCompatActivity {
         try {
             List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1)
 
+                    if (listAddresses != null && listAddresses.size() > 0) {
+                        address = "Address:\n";
+
+                        if (listAddresses.get(0).getThoroughfare() != null) {
+                            address += listAddresses.get(0).getThoroughfare() +
+                                    "\n";
+                        }
+                    }
         } catch (Exception e) {
             e.printStackTrace();
         }
