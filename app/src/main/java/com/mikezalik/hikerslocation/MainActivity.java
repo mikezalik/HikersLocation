@@ -8,12 +8,17 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+
+import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -86,5 +91,11 @@ public class MainActivity extends AppCompatActivity {
         longTextView.setText("Longitude: " + Double.toString(location.getLongitude()));
         accuracyTextView.setText("Accuracy: " + Double.toString(location.getAccuracy()));
         altitudeTextView.setText("Altitude: " + Double.toString(location.getAltitude()));
+
+        String address = "Could not find address.";
+
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+
+        List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1)
     }
 }
