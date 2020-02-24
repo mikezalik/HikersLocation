@@ -96,6 +96,11 @@ public class MainActivity extends AppCompatActivity {
 
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
 
-        List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1)
+        try {
+            List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1)
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
