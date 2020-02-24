@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
 
         try {
-            List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1)
+            List<Address> listAddresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
 
                     if (listAddresses != null && listAddresses.size() > 0) {
                         address = "Address:\n";
@@ -105,6 +105,11 @@ public class MainActivity extends AppCompatActivity {
                         if (listAddresses.get(0).getThoroughfare() != null) {
                             address += listAddresses.get(0).getThoroughfare() +
                                     "\n";
+                        }
+
+                        if (listAddresses.get(0).getThoroughfare() != null) {
+                            address += listAddresses.get(0).getLocality() +
+                                    " ";
                         }
                     }
         } catch (Exception e) {
