@@ -119,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
                             address += listAddresses.get(0).getAdminArea();
                         }
                     }
+
+                    addressTextView.setText(address);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
