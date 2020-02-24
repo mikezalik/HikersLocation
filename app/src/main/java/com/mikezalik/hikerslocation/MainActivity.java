@@ -107,9 +107,16 @@ public class MainActivity extends AppCompatActivity {
                                     "\n";
                         }
 
-                        if (listAddresses.get(0).getThoroughfare() != null) {
+                        if (listAddresses.get(0).getLocality() != null) {
                             address += listAddresses.get(0).getLocality() +
                                     " ";
+                        }
+                        if (listAddresses.get(0).getPostalCode() != null) {
+                            address += listAddresses.get(0).getPostalCode() +
+                                    " ";
+                        }
+                        if (listAddresses.get(0).getAdminArea() != null) {
+                            address += listAddresses.get(0).getAdminArea();
                         }
                     }
         } catch (Exception e) {
