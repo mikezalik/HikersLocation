@@ -100,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
                     if (listAddresses != null && listAddresses.size() > 0) {
                         address = "Address:\n";
-
                         if (listAddresses.get(0).getThoroughfare() != null) {
                             address += listAddresses.get(0).getThoroughfare() +
                                     "\n";
@@ -118,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
                             address += listAddresses.get(0).getAdminArea();
                         }
                     }
-
                     addressTextView.setText(address);
 
         } catch (Exception e) {
